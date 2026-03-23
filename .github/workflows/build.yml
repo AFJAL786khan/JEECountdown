@@ -8,6 +8,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: JEECountdown
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -22,9 +26,7 @@ jobs:
         uses: android-actions/setup-android@v3
 
       - name: Grant Gradle execute permission
-        run: |
-          find . -name "gradlew" -exec chmod +x {} \;
-          ls -la
+        run: chmod +x gradlew
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug
@@ -33,4 +35,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: JEE-Countdown-APK
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: JEECountdown/app/build/outputs/apk/debug/app-debug.apk
