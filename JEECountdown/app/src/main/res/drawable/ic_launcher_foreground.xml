@@ -4,27 +4,32 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
+
+    <!-- Background fill -->
     <path
         android:fillColor="#020609"
-        android:pathData="M0,0h108v108H0z" />
-    <!-- Outer ring -->
+        android:pathData="M0,0h108v108H0z"/>
+
+    <!-- Outer glow ring -->
     <path
         android:strokeColor="#00c8ff"
         android:strokeWidth="2"
-        android:fillColor="@android:color/transparent"
-        android:pathData="M54,18 A36,36 0 1,1 53.9,18 Z" />
-    <!-- J -->
+        android:fillColor="#00000000"
+        android:pathData="M54,18 m-36,0 a36,36 0 1,0 72,0 a36,36 0 1,0 -72,0"/>
+
+    <!-- Letter J -->
     <path
         android:fillColor="#00c8ff"
-        android:pathData="M48,34 h6 v26 c0,4 -2,7 -7,7 c-4,0 -6,-2.5 -6,-6 h5 c0,1.2 0.4,2 1,2 c1,0 1,-1 1,-2.5 Z" />
-    <!-- E -->
+        android:pathData="M44,32 L50,32 L50,58 C50,63 47,66 42,66 C37,66 34,63 34,58 L39,58 C39,60 40,61 42,61 C44,61 44,59 44,57 Z"/>
+
+    <!-- Letter E -->
     <path
         android:fillColor="#00c8ff"
-        android:pathData="M57,34 h12 v4 h-7 v7 h6 v4 h-6 v7 h7 v4 h-12 Z" />
-    <!-- E dot glow -->
-    <circle
+        android:pathData="M54,32 L66,32 L66,37 L59,37 L59,46 L65,46 L65,51 L59,51 L59,60 L66,60 L66,65 L54,65 Z"/>
+
+    <!-- Green dot accent -->
+    <path
         android:fillColor="#7fff5f"
-        android:cx="54"
-        android:cy="82"
-        android:r="3" />
+        android:pathData="M54,76 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0"/>
+
 </vector>
