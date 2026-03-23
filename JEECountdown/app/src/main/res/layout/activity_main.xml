@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="60dp"
+        android:paddingBottom="40dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:gravity="center_horizontal">
+
+        <!-- TAG -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="◆  JEE MAIN SESSION 1  ◆"
+            android:fontFamily="monospace"
+            android:textSize="11sp"
+            android:letterSpacing="0.15"
+            android:textColor="@color/accent"
+            android:background="@drawable/tag_border"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- TITLE -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JEE 2027"
+            android:textSize="72sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="8dp" />
+
+        <!-- SUBTITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Countdown to January 2027  ·  Stay locked in"
+            android:fontFamily="monospace"
+            android:textSize="11sp"
+            android:textColor="@color/muted"
+            android:layout_marginBottom="36dp" />
+
+        <!-- ROW 1: DAYS | HOURS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/card_border"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="000"
+                    android:textSize="54sp"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/accent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DAYS"
+                    android:fontFamily="monospace"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.2"
+                    android:textColor="@color/muted" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/card_border"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_hours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textSize="54sp"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/accent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HOURS"
+                    android:fontFamily="monospace"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.2"
+                    android:textColor="@color/muted" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ROW 2: MINUTES | SECONDS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/card_border"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_minutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textSize="54sp"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/accent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MINUTES"
+                    android:fontFamily="monospace"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.2"
+                    android:textColor="@color/muted" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/card_border"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_seconds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textSize="54sp"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/accent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SECONDS"
+                    android:fontFamily="monospace"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.2"
+                    android:textColor="@color/muted" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ROW 3: WEEKS | MONTHS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="14dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/card_border_orange"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+                <TextView
+                    android:id="@+id/tv_weeks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textSize="42sp"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/accent2"
+                    android:layout_marginRight="14dp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WEEKS"
+                        android:fontFamily="monospace"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.2"
+                        android:textColor="@color/muted" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="remaining"
+                        android:textSize="12sp"
+                        android:textColor="@color/muted" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/card_border_orange"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+                <TextView
+                    android:id="@+id/tv_months"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textSize="42sp"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/accent2"
+                    android:layout_marginRight="14dp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MONTHS"
+                        android:fontFamily="monospace"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.2"
+                        android:textColor="@color/muted" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="remaining"
+                        android:textSize="12sp"
+                        android:textColor="@color/muted" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- EXAM DATE BAR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_border"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:layout_marginBottom="14dp"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TARGET EXAM DATE"
+                    android:fontFamily="monospace"
+                    android:textSize="9sp"
+                    android:letterSpacing="0.12"
+                    android:textColor="@color/muted" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="JAN 22, 2027"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/accent3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SESSION"
+                    android:fontFamily="monospace"
+                    android:textSize="9sp"
+                    android:letterSpacing="0.12"
+                    android:textColor="@color/muted" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Session 1 · Paper 1"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/accent" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="● LIVE"
+                android:fontFamily="monospace"
+                android:textSize="10sp"
+                android:textColor="@color/accent" />
+
+        </LinearLayout>
+
+        <!-- PROGRESS LABELS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PREP JOURNEY STARTED"
+                android:fontFamily="monospace"
+                android:textSize="9sp"
+                android:letterSpacing="0.1"
+                android:textColor="@color/muted" />
+            <TextView
+                android:id="@+id/tv_progress_pct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0% elapsed"
+                android:fontFamily="monospace"
+                android:textSize="9sp"
+                android:letterSpacing="0.1"
+                android:textColor="@color/muted" />
+        </LinearLayout>
+
+        <!-- PROGRESS BAR -->
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_drawable"
+            android:layout_marginBottom="28dp" />
+
+        <!-- DIVIDER -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/border"
+            android:layout_marginBottom="18dp" />
+
+        <!-- MOTIVATIONAL QUOTE -->
+        <TextView
+            android:id="@+id/tv_quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚡  Every second counts"
+            android:fontFamily="monospace"
+            android:textSize="12sp"
+            android:textColor="@color/accent"
+            android:gravity="center"
+            android:layout_marginBottom="28dp" />
+
+        <!-- CREDIT -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CRAFTED BY  AFZAL KHAN  ·  JEE 2027"
+            android:fontFamily="monospace"
+            android:textSize="10sp"
+            android:letterSpacing="0.12"
+            android:textColor="@color/accent2" />
+
+    </LinearLayout>
+</ScrollView>
